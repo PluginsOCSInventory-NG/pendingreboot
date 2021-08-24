@@ -1,0 +1,12 @@
+{
+  "displayName" : "Pending Reboot",
+  "author" : ["Léa DROGUET"],
+  "contributor" : [],
+  "supportedAgent" : ["Windows"],
+  "version" : "1.0",
+  "licence" : "GPLv2",
+  "description" : {
+    "fr" : "Vérifie si le système est en attente de redémarrage",
+    "en" : "Check if system is awaiting reboot"
+  }
+}
