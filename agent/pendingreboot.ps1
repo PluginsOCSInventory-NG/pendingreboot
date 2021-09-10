@@ -12,7 +12,7 @@ if ($WMI_Reg) {
 	#Checking for SCCM namespace
 	$SCCM_Namespace = Get-WmiObject -Namespace ROOT\CCM\ClientSDK -List -ComputerName $ComputerName -ErrorAction Ignore
 	if ($SCCM_Namespace) {
-		if (([WmiClass]"\\$Computer\ROOT\CCM\ClientSDK:CCM_ClientUtilities").DetermineIfRebootPending().RebootPending -eq $true) {$PendingReboot = $true}
+		if (([WmiClass]"\\$ComputerName\ROOT\CCM\ClientSDK:CCM_ClientUtilities").DetermineIfRebootPending().RebootPending -eq $true) {$PendingReboot = $true}
 	}
 	
 	$lastChecked = Get-Date -Format("yyyy-MM-dd HH:mm:ss")
